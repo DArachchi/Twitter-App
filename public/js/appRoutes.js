@@ -9,5 +9,10 @@ angular.module('appRoutes', []).
       controller: 'HomeCtrl'
   });
 
+  $routeProvider.when('/test', {
+    templateUrl: 'views/test.html',
+    controller: 'TestCtrl'
+});
+
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
