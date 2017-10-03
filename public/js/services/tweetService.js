@@ -2,7 +2,7 @@
 
 angular.
   module('tweetService', ['ngResource']).
-    factory('Tweet', ['$resource',
+    factory('tweetFactory', ['$resource',
         function($resource) {
         return $resource('/api/tweets/', {}, {
             query: {
