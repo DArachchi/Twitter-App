@@ -13,10 +13,7 @@ module.exports = function(app) {
 
     // GET route to pull tweets for specified user
     app.get("/api/tweets/", function(req, res) {
-        var params = {
-                        screen_name: 'ScuderiaFerrari',
-                        count: 100
-                    };
+        var params = {screen_name: 'scuderiaferrari', count: 100};
 
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (error) {
