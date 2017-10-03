@@ -6,5 +6,6 @@ angular.module('twitterApp', [
   'appRoutes',
   'home',
   'test',
+  'tweetService',
   'chart.js'
 ]);
