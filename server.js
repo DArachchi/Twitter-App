@@ -22,8 +22,8 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
 
 // Requiring routes
-require('./app/routes/html-routes.js')(app);
 require('./app/routes/api-routes.js')(app);
+require('./app/routes/html-routes.js')(app);
 
 // Database configuration with mongoose
 mongoose.connect('mongodb://localhost/twitterdb');

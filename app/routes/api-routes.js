@@ -1,6 +1,6 @@
 // Require Twitter NPM and keys for twitter
 var twitter = require('twitter');
-var keys = require('./keys.js');
+var keys = require('../../keys.js');
 
 module.exports = function(app) {
 
@@ -24,8 +24,7 @@ module.exports = function(app) {
                         output = output + currentTweetData;
                     }
                 }
-                res.send(response);
-                console.log(output + 'hi');
+                res.send(output);
             }
         });
     });
