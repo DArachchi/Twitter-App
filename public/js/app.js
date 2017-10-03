@@ -4,5 +4,6 @@
 angular.module('twitterApp', [
   'ngRoute',
   'appRoutes',
-  'home'
+  'home',
+  'chart.js'
 ]);
