@@ -12,9 +12,8 @@ var client = new twitter ({
 module.exports = function(app) {
 
     // GET route to pull tweets for specified user
-    app.get("/api/tweets/", function(req, res) {
-        var params = {screen_name: 'scuderiaferrari', count: 100};
-
+    app.get("/api/tweets/:username", function(req, res) {
+        var params = {screen_name: req.params.username, count: 100};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (error) {
                 console.log(error);

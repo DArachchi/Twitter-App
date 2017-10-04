@@ -6,6 +6,13 @@
         <div class="col-md-10">
             <h2>Hashtag Usage</h2>
             <h3>Data compiled using last 100 tweets from user</h3>
+
+            <form ng-submit="submit()">
+                Search a Twitter User:
+                <input ng-model="userSearch" ng-required="true" ng-maxLength=15 type="text" />
+                <input type="submit" id="submit" value="Submit" />
+            </form>
+
             <canvas id="doughnut" class="chart chart-doughnut" chart-data="counts" chart-labels="hashtagLabels">
             </canvas>
         </div>
