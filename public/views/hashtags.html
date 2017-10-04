@@ -1,0 +1,20 @@
+<div layout="column" ng-cloak class="md-inline-form">
+    <md-toolbar md-scroll-shrink>
+        <div class="md-toolbar-tools">Hashtag Usage View</div>
+    </md-toolbar>
+    <h3>Data compiled using last 100 tweets from user</h3>
+    <md-content layout-padding>
+        <form ng-submit="submit()">
+            <md-input-container>
+                <label>Twitter Handle</label>
+                <input ng-model="userSearch">
+            </md-input-container>
+            <div>
+                <md-button type="submit">Submit</md-button>
+            </div>
+        </form>
+    </md-content>
+
+    <canvas id="doughnut" class="chart chart-doughnut" chart-data="counts" chart-labels="hashtagLabels">
+    </canvas>
+</div>

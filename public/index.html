@@ -12,10 +12,14 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 </head>
-<body ng-cloak>
-
-  <h1>Twitter Data View</h1>
-
+<body>
+    <div ng-cloak>
+      <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+          <h1 flex md-truncate>Twitter Data View</h1>
+        </div>
+      </md-toolbar>
+    </div>
   <div ng-view></div>
 
   <!-- In production use:
@@ -33,7 +37,7 @@
   <script src="js/app.js"></script>
   <script src="js/appRoutes.js"></script>
   <script src="js/controllers/HomeCtrl.js"></script>
-  <script src="js/controllers/TestCtrl.js"></script>
+  <script src="js/controllers/HashtagCtrl.js"></script>
   <script src="js/services/tweetService.js"></script>
 </body>
 </html>

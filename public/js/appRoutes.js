@@ -9,10 +9,10 @@ angular.module('appRoutes', []).
       controller: 'HomeCtrl'
   });
 
-  $routeProvider.when('/test', {
-    templateUrl: 'views/test.html',
-    controller: 'TestCtrl'
-});
+  $routeProvider.when('/hashtags', {
+    templateUrl: 'views/hashtags.html',
+    controller: 'HashtagCtrl'
+  });
 
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);

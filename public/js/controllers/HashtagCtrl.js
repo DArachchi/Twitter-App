@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('test', ['ngRoute'])
-  .controller('TestCtrl', ['$scope', 'tweetFactory', function($scope, tweetFactory) {
+angular.module('hashtags', ['ngMaterial', 'ngRoute'])
+  .controller('HashtagCtrl', ['$scope', 'tweetFactory', function($scope, tweetFactory) {
     $scope.userSearch;
     $scope.submit = function() {
         tweetFactory.query({username: $scope.userSearch}, function(tweets) {
