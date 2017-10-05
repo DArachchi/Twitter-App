@@ -5,6 +5,7 @@ angular.module('twitterApp', [
   'ngMaterial',
   'ngRoute',
   'appRoutes',
+  'navbar',
   'home',
   'hashtags',
   'tweetService',
