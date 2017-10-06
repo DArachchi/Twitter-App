@@ -1,7 +1,7 @@
 'use strict'
 
-angular.module('appRoutes', []).
-  config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+angular.module('appRoutes', [])
+  .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
   $routeProvider.when('/home', {

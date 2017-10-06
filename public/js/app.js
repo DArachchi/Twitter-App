@@ -10,4 +10,9 @@ angular.module('twitterApp', [
   'hashtags',
   'tweetService',
   'chart.js'
-]);
+])
+  .config(function($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+    .primaryPalette('blue')
+    .accentPalette('orange');
+  });

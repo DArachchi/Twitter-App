@@ -7,14 +7,14 @@
         <form ng-submit="submit()">
             <md-input-container>
                 <label>Twitter Handle</label>
-                <input ng-model="userSearch">
+                <input ng-model="userSearch" required minlength="1" maxlength="15">
             </md-input-container>
             <div>
                 <md-button type="submit">Submit</md-button>
             </div>
         </form>
-    </md-content>
 
-    <canvas id="doughnut" class="chart chart-doughnut" chart-data="counts" chart-labels="hashtagLabels">
-    </canvas>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="counts" chart-labels="hashtagLabels">
+        </canvas>
+    </md-content>
 </div>
