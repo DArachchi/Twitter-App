@@ -16,13 +16,11 @@
     <div ng-cloak>
       <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
-          <h1 flex md-truncate>Twitter Data View</h1>
+          <a href="#!/home"><h1 flex md-truncate>Twitter Data View</h1></a>
 
           <div ng-controller="NavbarCtrl" ng-cloak>
             <md-content class="md-padding">
               <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-                <!-- these require actual routing with ui-router or ng-route, so they
-                won't work in the demo-->
                 <md-nav-item md-nav-href="#!/hashtags">Hashtag Usage View</md-nav-item>
               </md-nav-bar>
             </md-content>
