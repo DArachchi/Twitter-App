@@ -14,15 +14,14 @@
 </head>
 <body>
     <div ng-cloak>
-      <md-toolbar class="md-hue-2">
+      <md-toolbar>
         <div class="md-toolbar-tools">
           <a href="#!/home"><h1 flex md-truncate>Twitter Data View</h1></a>
           <div ng-controller="NavbarCtrl" ng-cloak>
-            <md-content class="md-padding">
               <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
                 <md-nav-item md-nav-href="#!/hashtags">Hashtag Usage View</md-nav-item>
+                <md-nav-item md-nav-href="#!/mentions">User Mentions View</md-nav-item>
               </md-nav-bar>
-            </md-content>
           </div>
 
         </div>
@@ -47,6 +46,7 @@
   <script src="js/controllers/NavbarCtrl.js"></script>
   <script src="js/controllers/HomeCtrl.js"></script>
   <script src="js/controllers/HashtagCtrl.js"></script>
+  <script src="js/controllers/MentionsCtrl.js"></script>
   <script src="js/services/tweetService.js"></script>
 </body>
 </html>

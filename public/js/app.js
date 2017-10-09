@@ -8,6 +8,7 @@ angular.module('twitterApp', [
   'navbar',
   'home',
   'hashtags',
+  'mentions',
   'tweetService',
   'chart.js'
 ])

@@ -14,5 +14,11 @@ angular.module('appRoutes', [])
     controller: 'HashtagCtrl'
   });
 
+  $routeProvider.when('/mentions', {
+    templateUrl: 'views/mentions.html',
+    controller: 'MentionsCtrl'
+  });
+
+
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
