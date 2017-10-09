@@ -6,26 +6,26 @@ angular.module('mentions', ['ngMaterial', 'ngRoute'])
     $scope.submit = function() {
         tweetFactory.query({username: $scope.userSearch}, function(tweets) {
 
-            // Put all instances of hashtags into an array called 'hashtags'
-            var hashtags = [];
+            // Put all instances of user mentions into an array called 'mentions'
+            var mentions = [];
             for (var i=0; i<tweets.length; i++) {
-                for (var j=0; j<tweets[i].entities.hashtags.length; j++) {
-                    hashtags.push(tweets[i].entities.hashtags[j].text);
+                for (var j=0; j<tweets[i].entities.user_mentions.length; j++) {
+                    mentions.push(tweets[i].entities.user_mentions[j].screen_name);
                 }
             }
 
-            // Fill the 'counter' object with key-value pairs for each hashtag and how many times it was used
+            // Fill the 'counter' object with key-value pairs for each mention and how many times it was used
             var counter = {};
-            for (var i = 0; i<hashtags.length; i++) {
-                var num = hashtags[i];
+            for (var i = 0; i<mentions.length; i++) {
+                var num = mentions[i];
                 counter[num] = counter[num] ? counter[num] + 1 : 1;
             }
 
             // Fill arrays for labels and counts from the 'counter' object
-            $scope.hashtagLabels = [];
+            $scope.mentionLabels = [];
             $scope.counts = [];
             Object.keys(counter).forEach(function(key) {
-                $scope.hashtagLabels.push(key);
+                $scope.mentionLabels.push(key);
                 $scope.counts.push(counter[key]);
             });
         })
