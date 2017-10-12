@@ -25,8 +25,12 @@ app.use(express.static(__dirname + '/public'));
 require('./app/routes/api-routes.js')(app);
 require('./app/routes/html-routes.js')(app);
 
-// Database configuration with mongoose
-mongoose.connect('mongodb://localhost/twitterdb');
+// Database configuration with mongoose for development
+//mongoose.connect('mongodb://localhost/twitterdb');
+
+// Database configuration with mongoose for production
+mongoose.connect("mongodb://heroku_8jdf97hd:b6m93qckqvqrejnbq6k1i0kkqe@ds131900.mlab.com:31900/heroku_8jdf97hd");
+
 
 var db = mongoose.connection;
 
