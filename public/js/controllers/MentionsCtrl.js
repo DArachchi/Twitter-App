@@ -10,7 +10,7 @@ angular.module('mentions', ['ngMaterial', 'ngRoute'])
             var mentions = [];
             for (var i=0; i<tweets.length; i++) {
                 for (var j=0; j<tweets[i].entities.user_mentions.length; j++) {
-                    mentions.push(tweets[i].entities.user_mentions[j].screen_name);
+                    mentions.push(tweets[i].entities.user_mentions[j].name + " (" + tweets[i].entities.user_mentions[j].screen_name + ")");
                 }
             }
 
