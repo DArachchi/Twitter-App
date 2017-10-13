@@ -5,25 +5,36 @@
                 <span class="md-subhead">Enter a Twitter handle to visualize user mentions for their last 100 tweets.</span>
         </md-card-title-text>
     </md-card-title>
+    
+    <md-content class="md-padding" layout-xs="column" layout="row">
 
-    <md-card-content>
-        <md-content flex layout-padding>
-            
-            <form ng-submit="submit()">
-                <md-input-container>
-                    <label>Twitter Handle</label>
-                    <md-icon md-svg-src="img/twitter_logo.svg"></md-icon>
-                    <input ng-model="userSearch" required minlength="1" maxlength="15">
-                </md-input-container>
-                <div>
-                    <md-button type="submit">Submit</md-button>
-                </div>
-            </form>
+        <md-card>
+            <md-card-content>
+                <md-content flex layout-padding>
+                    <form ng-submit="submit()">
+                        <md-input-container>
+                            <label>Twitter Handle</label>
+                            <md-icon md-svg-src="img/twitter_logo.svg"></md-icon>
+                            <input ng-model="userSearch" required minlength="1" maxlength="15">
+                        </md-input-container>
+                        <div>
+                            <md-button type="submit">Submit</md-button>
+                        </div>
+                    </form>
+                </md-content>
+            </md-card-content>
+        </md-card>
 
-            <canvas flex id="doughnut" class="chart chart-doughnut" chart-data="counts" chart-labels="mentionLabels">
-            </canvas>
+        <md-card>
+            <md-card-title-text>
+                    <span class="md-headline">Results</span>
+            </md-card-title-text>
 
-        </md-content>
+            <md-content flex layout-padding>
+                <canvas flex id="doughnut" class="chart chart-doughnut" chart-data="counts" chart-labels="mentionLabels">
+                </canvas>
+            </md-content>
+        </md-card>
 
-    </md-card-content>
+    </md-content>
 </md-card>
