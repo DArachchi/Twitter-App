@@ -15,7 +15,15 @@ module.exports = function(app) {
         var params = {screen_name: req.params.username, count: 100};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (error) {
-                console.log(error);
+                for(var i=0; i<error.length; i++) {
+                    switch (error[i].code) {
+                        case 34:
+                            console.log("Not valid");
+                            break;
+                        default:
+                            console.log(error[i]);
+                    }
+                }
             } else {
                 res.send(tweets);
             }
