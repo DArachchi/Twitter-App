@@ -11,6 +11,11 @@ mongoose.Promise = Promise;
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+// Load local environmental variables if they do not exist from deployment
+if(!process.env.consumer_key && !process.env.consumer_secret && !process.env.access_token_key && !process.env.access_token_secret && !process.env.MONGODB_URI) {
+	var env = require('./env.js');
+}
+
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
@@ -29,8 +34,7 @@ require('./app/routes/html-routes.js')(app);
 //mongoose.connect('mongodb://localhost/twitterdb');
 
 // Database configuration with mongoose for production
-mongoose.connect("mongodb://heroku_8jdf97hd:b6m93qckqvqrejnbq6k1i0kkqe@ds131900.mlab.com:31900/heroku_8jdf97hd");
-
+mongoose.connect(process.env.MONGODB_URI);
 
 var db = mongoose.connection;
 
