@@ -9,6 +9,7 @@ angular.module('twitterApp', [
   'home',
   'hashtags',
   'mentions',
+  'about',
   'tweetService',
   'chart.js'
 ])

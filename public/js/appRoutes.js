@@ -19,6 +19,10 @@ angular.module('appRoutes', [])
     controller: 'MentionsCtrl'
   });
 
+  $routeProvider.when('/about', {
+    templateUrl: 'views/about.html',
+    controller: 'AboutCtrl'
+  });
 
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
