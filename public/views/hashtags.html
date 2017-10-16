@@ -27,7 +27,7 @@
 
         <md-card>
             <md-card-title-text>
-                    <span class="md-headline">Results</span>
+                <span class="md-headline">Doughnut Chart</span>
             </md-card-title-text>
 
             <md-content flex layout-padding>
@@ -36,5 +36,19 @@
             </md-content>
         </md-card>
 
+        <md-card>
+            <md-card-title-text>
+                <span class="md-headline">Bubble Chart</span>
+                <md-button ng-click="createBubbleChart()">Redraw</md-button>
+            </md-card-title-text>
+
+            <md-content flex layout-padding>
+        <div class="col-lg-6 col-sm-12 ng-scope" id="bubble-chart">
+                  <div class="panel-body"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></iframe>
+                    <canvas id="bubble" class="chart chart-bubble ng-isolate-scope" chart-data="data" chart-options="bubbleOptions" ></canvas>
+                  </div>
+              </div>
+            </md-content>
+            </md-card>
     </md-content>
 </md-card>
