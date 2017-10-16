@@ -15,13 +15,11 @@
 <body>
     <div ng-cloak>
       <md-toolbar>
-        <div class="md-toolbar-tools">
+        <div class="md-toolbar-tools" ng-controller="NavbarCtrl">
           <a href="#!/home"><h1 flex md-truncate>Twitter Dataview</h1></a>
-          <div ng-controller="NavbarCtrl" ng-cloak>
+          <div ng-cloak>
               <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-                <md-nav-item md-nav-href="#!/hashtags">Hashtag Usage View</md-nav-item>
-                <md-nav-item md-nav-href="#!/mentions">User Mentions View</md-nav-item>
-                <md-nav-item md-nav-href="#!/about">About</md-nav-item>
+                <md-nav-item ng-repeat="item in navItems" md-nav-href="#!/{{item.name}}" name="{{item.name}}">{{item.label}}</md-nav-item>
               </md-nav-bar>
           </div>
 
